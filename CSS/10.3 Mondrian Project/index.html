@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    
+    .flex-container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-container-1 {
+      height: 748px;
+      width: 748px;
+      display: grid;
+      background-color: black;
+      gap: 9px;
+      grid-template: 414px 325px / 320px 419px;
+    }
+
+    .item {
+      background-color: #F0F1EC;
+    }
+
+    .g1-item-1 {
+      background-color: #E72F24;
+    }
+
+    .flex-container-1 {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .f1-item-1 {
+      height: 305px;
+    }
+
+    .f1-item-2 {
+      height: 20px;
+    }
+
+    .grid-container-2 {
+      background-color: black;
+      display: grid;
+      grid-template-columns: 360px 50px;
+      gap: 9px;
+    }
+
+    .grid-container-3 {
+      background-color: black;
+      display: grid;
+      grid-template: 295px 20px / 198px 153px;
+      gap: 9px;
+    }
+
+    .g3-item-1 {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+
+    .g3-item-2 {
+      background-color: #F9D01E;
+    }
+
+    .g3-item-3 {
+      background-color: #232629;
+    }
+
+    .flex-container-2 {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .f2-item-1 {
+      height: 130px;
+      border-bottom: 9px solid black;
+      background-color: #004592;
+    }
+
+    .f2-item-2 {
+      height: 175px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="grid-container-1">
+      <div class="item g1-item-1"></div>
+      <div class="item g1-item-2"></div>
+      <div class="item flex-container-1 g1-item-3">
+        <div class="item f1-item-1"></div>
+        <div class="item f1-item-2"></div>
+      </div>
+      <div class="item grid-container-2 g1-item-4">
+        <div class="item g2-item-1 grid-container-3">
+          <div class="item g3-item-1"></div>
+          <div class="item g3-item-2"></div>
+          <div class="item g3-item-3"></div>
+        </div>
+        <div class="item g2-item-2 flex-container-2">
+          <div class="item f2-item-1"></div>
+          <div class="item f2-item-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Write your HTML here -->
+</body>
+
+</html>
