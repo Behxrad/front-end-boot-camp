@@ -27,7 +27,7 @@ export const sendCartData = (cart) => {
 				throw new Error('Sending cart data failed!');
 			}
 
-			const data = await response.json();
+			await response.json();
 		};
 
 		try {
