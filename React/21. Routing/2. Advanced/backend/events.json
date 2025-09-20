@@ -1,6 +1,13 @@
 {
   "events": [
     {
+      "title": "Wedding",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQleqBsZ7GSsW0o8Vi3PtR1D5Pa7M2RhiQpQg&s",
+      "date": "2025-10-16",
+      "description": "Wedding ceremony !!!",
+      "id": "8485e620-f070-456c-859f-37ff38e44d03"
+    },
+    {
       "title": "Conference ",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdGvNlLLu9WU1r3yMaMIvkEgjvC7dgGVyt6A&s",
       "date": "2025-10-15",
