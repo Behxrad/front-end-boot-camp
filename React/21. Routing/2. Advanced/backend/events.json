@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "title": "Conference ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdGvNlLLu9WU1r3yMaMIvkEgjvC7dgGVyt6A&s",
+      "date": "2025-10-15",
+      "description": "New technologies ",
+      "id": "7e2c9772-bcb9-44f6-8ad7-09d56a88d5d0"
+    },
+    {
+      "title": "Holiday",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCq7Ds11lbj-kCZXy0LrORZRVqXAR0io_7SA&s",
+      "date": "2025-09-15",
+      "description": "Holiday in India!!!",
+      "id": "5b1d337f-d8a9-422f-b308-1aa4400ea5d8"
+    },
+    {
       "id": "e1",
       "title": "A dummy event",
       "date": "2023-02-22",

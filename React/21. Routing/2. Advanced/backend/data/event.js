@@ -10,7 +10,7 @@ async function readData() {
 }
 
 async function writeData(data) {
-  await fs.writeFile('events.json', JSON.stringify(data));
+  await fs.writeFile('events.json', JSON.stringify(data, null, 2));
 }
 
 async function getAll() {
