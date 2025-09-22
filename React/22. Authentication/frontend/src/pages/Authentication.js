@@ -15,10 +15,10 @@ export async function action({ request }) {
 		throw json({ message: 'Unsupported mode.' }, { status: 422 });
 	}
 
-	const data = await request.formData();
+	const formData = await request.formData();
 	const authData = {
-		email: data.get('email'),
-		password: data.get('password'),
+		email: formData.get('email'),
+		password: formData.get('password'),
 	};
 
 	const response = await fetch('http://localhost:8080/' + mode, {
@@ -36,6 +36,9 @@ export async function action({ request }) {
 	if (!response.ok) {
 		throw json({ message: 'Could not authenticate error' }, { status: 500 });
 	}
+
+	const resData = await response.json()
+	localStorage.setItem('token', resData.token)
 
 	return redirect('/');
 }
