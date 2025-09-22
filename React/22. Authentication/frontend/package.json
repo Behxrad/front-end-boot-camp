@@ -10,7 +10,11 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
