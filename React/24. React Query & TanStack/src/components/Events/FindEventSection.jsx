@@ -1,9 +1,10 @@
-import { useQuery } from '@tanstack/react-query';
 import { useRef, useState } from 'react';
-import { fetchEvents } from '../../util/http';
-import LoadingIndicator from '../UI/LoadingIndicator';
-import ErrorBlock from '../UI/ErrorBlock';
-import EventItem from './EventItem';
+import { useQuery } from '@tanstack/react-query';
+
+import { fetchEvents } from '../../util/http.js';
+import LoadingIndicator from '../UI/LoadingIndicator.jsx';
+import ErrorBlock from '../UI/ErrorBlock.jsx';
+import EventItem from './EventItem.jsx';
 
 export default function FindEventSection() {
 	const searchElement = useRef();
@@ -20,7 +21,7 @@ export default function FindEventSection() {
 		setSearchTerm(searchElement.current.value);
 	}
 
-	var content = <p>Please enter a search term and to find events.</p>;
+	let content = <p>Please enter a search term and to find events.</p>;
 
 	if (isLoading) {
 		content = <LoadingIndicator />;
@@ -30,7 +31,7 @@ export default function FindEventSection() {
 		content = (
 			<ErrorBlock
 				title='An error occurred'
-				message={error.info?.message || 'Failed to fetch events'}
+				message={error.info?.message || 'Failed to fetch events.'}
 			/>
 		);
 	}
