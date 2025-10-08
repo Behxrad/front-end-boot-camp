@@ -1,6 +1,7 @@
 'use server';
 
 import { redirect } from 'next/navigation';
+
 import { saveMeal } from './meals';
 
 function isInvalidText(text) {
@@ -29,9 +30,11 @@ export async function shareMeal(prevState, formData) {
 		!meal.image ||
 		meal.image.size === 0
 	) {
-		return { message: 'Invalid input' };
+		return {
+			message: 'Invalid input.',
+		};
 	}
 
 	await saveMeal(meal);
-	redirect('/');
+	redirect('/meals');
 }
