@@ -1,5 +1,5 @@
-import { captureOwnerStack } from 'react';
 import { createContext, useContext, useReducer } from 'react';
+import AccordionItem from './AccordionItem';
 
 const AccrodionContext = createContext();
 
@@ -8,6 +8,8 @@ function accordionReducer(prevState, action) {
 		return action.payload;
 	} else if (action.type === 'close') {
 		return null;
+	} else if (action.type === 'toggle') {
+		return prevState === action.payload ? null : action.payload;
 	} else {
 		return prevState;
 	}
@@ -28,18 +30,21 @@ export function useAccordionContext() {
 export default function Accordion({ children, className }) {
 	const [openItemID, accordionDispatch] = useReducer(accordionReducer);
 
-	function openItem(id) {
-		accordionDispatch({ type: 'open', payload: id });
-	}
+	// function openItem(id) {
+	// 	accordionDispatch({ type: 'open', payload: id });
+	// }
 
-	function closeItem() {
-		accordionDispatch({ type: 'close' });
+	// function closeItem() {
+	// 	accordionDispatch({ type: 'close' });
+	// }
+
+	function toggleItem(id) {
+		accordionDispatch({ type: 'toggle', payload: id });
 	}
 
 	const contextValue = {
 		openItemID,
-		openItem,
-		closeItem,
+		toggleItem,
 	};
 
 	return (
@@ -48,3 +53,5 @@ export default function Accordion({ children, className }) {
 		</AccrodionContext.Provider>
 	);
 }
+
+Accordion.Item = AccordionItem;
