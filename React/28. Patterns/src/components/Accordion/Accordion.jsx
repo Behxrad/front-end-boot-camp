@@ -1,5 +1,7 @@
 import { createContext, useContext, useReducer } from 'react';
 import AccordionItem from './AccordionItem';
+import AccordionContent from './AccordionContent';
+import AccordionTitle from './AccordionTitle';
 
 const AccrodionContext = createContext();
 
@@ -55,3 +57,5 @@ export default function Accordion({ children, className }) {
 }
 
 Accordion.Item = AccordionItem;
+Accordion.Title = AccordionTitle;
+Accordion.Content = AccordionContent;
