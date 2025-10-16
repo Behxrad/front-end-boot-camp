@@ -7,18 +7,24 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import productReducer from './store/reducers/products';
+import ProductsProvider from './context/product-context';
+import configureStore from './hooks-store/products-store';
 
-const rootReducer = combineReducers({
-  shop: productReducer,
-});
+// const rootReducer = combineReducers({
+// 	shop: productReducer,
+// });
 
-const store = createStore(rootReducer);
+// const store = createStore(rootReducer);
+
+configureStore();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
+	// <Provider store={store}>
+	// <ProductsProvider>
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>
+	// </ProductsProvider>
+	// </Provider>
 );
