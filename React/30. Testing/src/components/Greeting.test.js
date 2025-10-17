@@ -55,7 +55,7 @@ describe('Greeting component', () => {
 		const outputElement2 = screen.queryByText('good to see you', {
 			exact: false,
 		});
-		expect(outputElement1).toBeInTheDocument() ;
-		expect(outputElement2).not.toBeInTheDocument() ;
+		expect(outputElement1).toBeInTheDocument();
+		expect(outputElement2).toBeNull();
 	});
 });
